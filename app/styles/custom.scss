@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+.test {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border: 1px solid red;
+}
