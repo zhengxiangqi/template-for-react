@@ -1,3 +1,3 @@
 # Home
 
-##### [**QuickStart**](quick_start.md)
+##### [**QuickStart**](/us-en/quick_start.md)
