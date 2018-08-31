@@ -11,6 +11,7 @@ module.exports = {
         sources: ['app/static/**/*'],
         libs: ['app/libs/**/*'],
         vendors: [
+            'node_modules/fastclick/lib/fastclick.js',
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/react/umd/react.development.js',
             'node_modules/react/umd/react.production.min.js',
