@@ -2,7 +2,7 @@
 
 ![logo](_media/icon.svg)
 
-# docs cover <small>1.0</small>
+# docs cover <small>%%GULP_INJECT_VERSION%%</small>
 
 > Markdown document generator.
 

@@ -9,6 +9,7 @@ module.exports = function(gulp, config, plugins) {
             }
         }
         gulp.src(config.docs.sources)
+            .pipe(plugins.injectVersion())
             .pipe(gulp.dest(config.tmp + 'dist/docs/'))
             .on('end', onComplete);
 

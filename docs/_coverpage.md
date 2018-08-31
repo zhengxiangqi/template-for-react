@@ -2,7 +2,7 @@
 
 ![logo](_media/icon.svg)
 
-# 文档封面 <small>1.0</small>
+# 文档封面 <small>%%GULP_INJECT_VERSION%%</small>
 
 > Markdown文档生成.
 
