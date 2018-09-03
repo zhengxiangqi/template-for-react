@@ -57,8 +57,8 @@ module.exports = function(gulp, config, plugins) {
                     }]
                 }
             }),
-            plugins.injectVersion(),
-            gulp.dest(config.tmp + 'dist/app/'),
+            plugins.rev(),
+            gulp.dest(config.tmp + 'dist/app/webpage'),
         ]);
         combined.on('error', console.error.bind(console));
         return combined;

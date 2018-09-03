@@ -10,10 +10,11 @@
         * images：网页中用到的图片资源
         * favicon.ico：网页图标
         * index.html：网页基础文件，用来引入各个样式文件与脚本文件
-    * styles：样式代码
-        * bootstrap.sass：自定义Bootstrap样式代码
-        * custom.sass：自定义的样式代码
-        * index.sass：样式文件入口，用来引入各个样式文件
+    * styles：样式代码，目前采用sacc和css双模式开发，可提升编译效率及样式代码灵活性
+        * bootstrap/index.scss：scss样式文件入口，用于引入sass样式代码
+        * bootstrap/bootstrap.scss：用于自定义bootstrap样式
+        * custom/index.css：自定义样式文件
+        * custom/style.css：自定义样式文件
     * webpage：网页代码
         * components：组件代码
         * screens：各个界面的代码
@@ -26,7 +27,7 @@
 **工程采用以下框架进行开发**
 * React：用于构建页面功能逻辑
 * ReactRouter：用于组织页面路由
-* Bootstrap4：用于加速UI组件开发
+* Bootstrap4：用于加速UI组件开发，目前采用sass和css双模式开发
 * Lodash：用于加速js功能逻辑编写
 * Sass: Css结合Bootstrap开发语言Sass进行样式编写
 * Ddocsify: 使用Markdown格式编写项目文档
@@ -36,11 +37,17 @@
 * gulp：用于流式任务执行
 * gulp相关的插件若干：用于辅助工程检查、编译及发布
 * webpack：用于打包js文件
+* rev：用于对文件进行md5命名，解决缓存问题
+* rev-collector：用于对文件进行md5文件替换，解决缓存问题
 * babel：用于编译jsx格式文件
 * uglify：用于压缩js文件
+* uglifycss：用于压缩css文件
 * sourcemap：用于生成js的map文件
-* jshint：用于js代码检查
 * csslint: 用于css代码检查
+* jshint：用于js代码检查
+* inject：用于动态注入css和js文件
+* happypack：用于对gulp进行多线程编译
+* inject-version：用于对文档注入package.json中的版本号
 
 
 **gulp指令**

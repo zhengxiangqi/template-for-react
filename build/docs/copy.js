@@ -8,13 +8,16 @@ module.exports = function(gulp, config, plugins) {
                 done();
             }
         }
+
         gulp.src(config.docs.sources)
+            .pipe(gulp.dest(config.tmp + 'dist/docs/'))
+            .pipe(plugins.filter(['**/*.html', '**/*.md']))
             .pipe(plugins.injectVersion())
             .pipe(gulp.dest(config.tmp + 'dist/docs/'))
             .on('end', onComplete);
 
         gulp.src(config.docs.vendors, { base: 'node_modules' })
-            .pipe(gulp.dest(config.tmp + 'dist/docs/vendors/'))
+            .pipe(gulp.dest(config.tmp + 'dist/docs/vendors'))
             .on('end', onComplete);
     };
 };

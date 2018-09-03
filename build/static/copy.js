@@ -4,21 +4,28 @@ module.exports = function(gulp, config, plugins) {
 
         function onComplete() {
             completeCount++;
-            if (completeCount == 3) {
+            if (completeCount == 4) {
                 done();
             }
         }
 
+        gulp.src(config.static.index, { base: 'app/static' })
+            .pipe(gulp.dest(config.tmp + 'dist'))
+            .on('end', onComplete);
+
         gulp.src(config.static.sources, { base: 'app/static' })
-            .pipe(gulp.dest(config.tmp + 'dist/'))
+            .pipe(plugins.rev())
+            .pipe(gulp.dest(config.tmp + 'dist'))
+            .pipe(plugins.rev.manifest('static.json'))
+            .pipe(gulp.dest(config.tmp + 'dist/rev'))
             .on('end', onComplete);
 
         gulp.src(config.static.libs, { base: 'app/libs' })
-            .pipe(gulp.dest(config.tmp + 'dist/vendors/'))
+            .pipe(gulp.dest(config.tmp + 'dist/vendors'))
             .on('end', onComplete);
 
         gulp.src(config.static.vendors, { base: 'node_modules' })
-            .pipe(gulp.dest(config.tmp + 'dist/vendors/'))
+            .pipe(gulp.dest(config.tmp + 'dist/vendors'))
             .on('end', onComplete);
     };
 };

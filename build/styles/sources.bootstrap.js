@@ -16,9 +16,10 @@ module.exports = function(gulp, config, plugins) {
         
         if (!config.devMode) {
             webpackPlugins.push(new UglifyJSPlugin({
-                sourceMap: true
+                sourceMap: false
             }));
         }
+        
         webpackPlugins.push(new HappyPackPlugin({
             id: 'styles',
             loaders: [{
@@ -32,14 +33,14 @@ module.exports = function(gulp, config, plugins) {
             verbose: true,
             debug: (config.devMode) ? true : false
         }));
-
+  
         var combined = combiner.obj([
-            gulp.src(config.styles.sources),
+            gulp.src(config.styles.sources_bootstrap),
             webpack({
-                entry: config.styles.entry,
-                devtool: (config.devMode) ? 'source-map' : false,
+                entry: config.styles.entry_bootstrap,
+                devtool: false,
                 output: {
-                    filename: 'styles.min.js',
+                    filename: 'styles-bootstrap.min.js',
                     library: 'styles',
                     libraryTarget: 'var'
                 },
@@ -53,31 +54,14 @@ module.exports = function(gulp, config, plugins) {
                         include: [resolve('app/styles')],
                         exclude: /node_modules/,
                         loader: 'happypack/loader?id=styles'
-                        // use: [{
-                        //     loader: 'style-loader', // inject CSS to page
-                        // }, {
-                        //     loader: 'css-loader', // translates CSS into CommonJS modules
-                        // }, {
-                        //     loader: 'postcss-loader', // Run post css actions
-                        //     options: {
-                        //         plugins: function () { // post css plugins, can be exported to postcss.config.js
-                        //             return [
-                        //                 require('precss'),
-                        //                 require('autoprefixer')
-                        //             ];
-                        //         }
-                        //     }
-                        // }, {
-                        //     loader: 'sass-loader' // compiles Sass to CSS
-                        // }]
                     }]
                 }
             }),
-            plugins.injectVersion(),
-            plugins.csslint(),
-            gulp.dest(config.tmp + 'dist/app/'),
+            plugins.rev(),
+            gulp.dest(config.tmp + 'dist/app/styles/bootstrap'),
         ]);
         combined.on('error', console.error.bind(console));
+        
         return combined;
     }
 }

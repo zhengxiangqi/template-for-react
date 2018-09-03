@@ -1,14 +1,23 @@
 module.exports = {
+    devMode: false,
     styles: {
-        entry: './app/styles/index.scss',
-        sources: ['app/styles/**/*']
+        entry_bootstrap: './app/styles/bootstrap/index.scss',
+        entry_custom: './app/styles/custom/index.css',
+        sources_bootstrap: ['app/styles/bootstrap/**/*'],
+        sources_custom: ['app/styles/custom/**/*']
     },
     webpage: {
         entry: './app/webpage/index.js',
         sources: ['app/webpage/**/*']
     },
     static: {
-        sources: ['app/static/**/*'],
+        index: ['app/static/index.html'],
+        sources: [
+            'app/static/favicon.ico',
+            'app/static/assets/*',
+            'app/static/images/*',
+            'app/static/fonts/*'
+        ],
         libs: ['app/libs/**/*'],
         vendors: [
             'node_modules/fastclick/lib/fastclick.js',

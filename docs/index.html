@@ -9,7 +9,8 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="vendors/docsify/lib/themes/vue.css">
+    <!-- inject:css -->
+    <!-- endinject -->
 </head>
 
 <body>
@@ -19,7 +20,7 @@
         name: ['%%GULP_INJECT_VERSION%%'],
         basePath: '/docs/',
         loadNavbar: true,
-        loadSidebar: '_sidebar.md',
+        loadSidebar: true,
         homepage: 'README.md',
         subMaxLevel: 1,
         noEmoji: true,
@@ -27,7 +28,8 @@
         coverpage: ['/', '/us-en/']
     }
     </script>
-    <script type="text/javascript" src="vendors/docsify/lib/docsify.min.js"></script>
 </body>
 
+    <!-- inject:js -->
+    <!-- endinject -->
 </html>
