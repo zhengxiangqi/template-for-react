@@ -22,9 +22,7 @@ module.exports = {
         vendors: [
             'node_modules/fastclick/lib/fastclick.js',
             'node_modules/jquery/dist/jquery.min.js',
-            'node_modules/react/umd/react.development.js',
             'node_modules/react/umd/react.production.min.js',
-            'node_modules/react-dom/umd/react-dom.development.js',
             'node_modules/react-dom/umd/react-dom.production.min.js',
             'node_modules/bootstrap/dist/css/bootstrap.min.css',
             'node_modules/bootstrap/dist/css/bootstrap.min.css.map',
