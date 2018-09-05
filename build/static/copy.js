@@ -21,7 +21,7 @@ module.exports = function(gulp, config, plugins) {
             .on('end', onComplete);
 
         gulp.src(config.static.libs, { base: 'app/libs' })
-            .pipe(gulp.dest(config.tmp + 'dist/vendors'))
+            .pipe(gulp.dest(config.tmp + 'dist/vendors/libs'))
             .on('end', onComplete);
 
         gulp.src(config.static.vendors, { base: 'node_modules' })

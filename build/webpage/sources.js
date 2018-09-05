@@ -16,7 +16,7 @@ module.exports = function(gulp, config, plugins) {
         
         if (!config.devMode) {
             webpackPlugins.push(new UglifyJSPlugin({
-                sourceMap: true
+                sourceMap: false
             }));
         }
         webpackPlugins.push(new HappyPackPlugin({
@@ -38,7 +38,7 @@ module.exports = function(gulp, config, plugins) {
                 entry: {
                     app: config.webpage.entry
                 },
-                devtool: (config.devMode) ? 'source-map' : false,
+                devtool: false,
                 output: {
                     filename: 'webpage.min.js',
                     library: 'webpage',

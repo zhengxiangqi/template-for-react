@@ -24,12 +24,21 @@ module.exports = {
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/react/umd/react.production.min.js',
             'node_modules/react-dom/umd/react-dom.production.min.js',
-            'node_modules/bootstrap/dist/css/bootstrap.min.css',
-            'node_modules/bootstrap/dist/css/bootstrap.min.css.map',
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
             'node_modules/bootstrap/dist/js/bootstrap.min.js.map'
         ]
     },
+    inject: [
+        'tmp/dist/vendors/fastclick/**/*.js',
+        'tmp/dist/vendors/jquery/**/*.js',
+        'tmp/dist/vendors/react/**/*.js',
+        'tmp/dist/vendors/react-dom/**/*.js',
+        'tmp/dist/vendors/bootstrap/**/*.js',
+        'tmp/dist/vendors/libs/**/*.js',
+        'tmp/dist/app/styles/**/*.css',
+        'tmp/dist/app/styles/**/*.js',
+        'tmp/dist/app/webpage/**/*.js'
+    ],
     docs: {
         sources: ['docs/**/*'],
         vendors: [
