@@ -39,6 +39,7 @@ module.exports = {
             'node_modules/docsify/lib/themes/vue.css'
         ]
     },
+    test: ['test/**/*'],
     dist: 'dist/',
     tmp: 'tmp/'
 }

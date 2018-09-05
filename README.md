@@ -48,12 +48,16 @@
 * inject：用于动态注入css和js文件
 * happypack：用于对gulp进行多线程编译
 * inject-version：用于对文档注入package.json中的版本号
+* mocha：用于编写测试用例进行测试，具体如何编写测试用例参照https://mochajs.org
 
 
 **gulp指令**
 ```bash
 # 编译工程
 gulp
+
+# 运行测试用例
+gulp test
 
 # 启动本地服务来运行工程，并在文件改动时进行实时编译，首次运行工程需要先编译一次工程后再启动
 gulp watch --dev
@@ -80,8 +84,11 @@ npm run build
 # 启动本地服务来运行工程，首次运行工程需要先编译一次工程后再启动
 npm start
 
-# 启动本地服务来运行工程，并在文件改动时进行实时编译，首次运行工程需要先编译一次工程后再启动
+# 运行测试用例
 npm test
+
+# 启动本地服务来运行工程，并在文件改动时进行实时编译，首次运行工程需要先编译一次工程后再启动
+npm run watch
 
 # 发布工程，需要先配置 build/release.js 文件的 host、user、remotePath 参数
 # host: 服务器地址

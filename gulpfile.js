@@ -30,6 +30,7 @@ gulp.task('docs.copy', require('./build/docs/copy.js')(gulp, config, plugins));
 gulp.task('docs.inject', require('./build/docs/inject.js')(gulp, config, plugins));
 
 gulp.task('inject', require('./build/inject.js')(gulp, config, plugins));
+gulp.task('test', require('./build/test.js')(gulp, config, plugins));
 gulp.task('beep', require('./build/beep.js')(gulp, config, plugins));
 gulp.task('watch', require('./build/watch.js')(gulp, config, plugins));
 gulp.task('all', require('./build/all.js')(gulp, config, plugins));

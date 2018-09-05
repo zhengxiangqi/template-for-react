@@ -14,6 +14,7 @@ module.exports = function(gulp, config, plugins) {
             'docs.copy',
             'docs.inject',
             'inject',
+            'test',
             'dist.clean',
             'dist.copy',
             'beep',

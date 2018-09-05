@@ -5,7 +5,8 @@
   "main": "dist/js/webpage.min.js",
   "scripts": {
     "start": "http-server ./dist -c-1",
-    "test": "gulp watch --dev",
+    "test": "gulp test",
+    "watch": "gulp watch --dev",
     "build": "gulp",
     "release": "gulp release"
   },
@@ -39,6 +40,7 @@
     "gulp-inject-version": "^1.0.1",
     "gulp-jshint": "^2.1.0",
     "gulp-load-plugins": "^1.5.0",
+    "gulp-mocha": "^6.0.0",
     "gulp-param": "^1.0.3",
     "gulp-react": "^3.1.0",
     "gulp-rev": "^8.1.1",
@@ -51,6 +53,7 @@
     "gulp-webpack": "^1.5.0",
     "happypack": "^5.0.0",
     "jshint": "^2.9.5",
+    "mocha": "^5.2.0",
     "node-sass": "^4.9.2",
     "postcss-loader": "^2.1.6",
     "precss": "^3.1.2",
