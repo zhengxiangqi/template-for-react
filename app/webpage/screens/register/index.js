@@ -84,10 +84,10 @@ export default class Register extends React.Component {
 
     render() {
         return (
-            <div className="fullscreen">
+            <div>
                 <Header title={Localization.get('register')} onBack={this.props.history.goBack} />
-                <div className="px-5 py-5">
-                    <div className="form-group">
+                <div className="container-fluid">
+                    <div className="form-group mt-3">
                         <input
                             type="tel"
                             className="form-control"

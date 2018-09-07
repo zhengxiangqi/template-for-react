@@ -8,10 +8,12 @@ export default class Home extends React.Component {
 
     render() {
         return (
-            <div className="container-fluid px-0">
+            <div>
                 <Header home={true} fixed={true}/>
-                <div className="row no-gutters mt-5 pt-5">
-                    <a target="_blank" href="/docs">文档</a>
+                <div className="container-fluid">
+                    <div className="row no-gutters mt-5 pt-5">
+                        <a target="_blank" href="/docs">文档</a>
+                    </div>
                 </div>
             </div>
         );

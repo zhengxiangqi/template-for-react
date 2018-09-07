@@ -57,10 +57,10 @@ export default class ChangePassword extends React.Component {
 
     render() {
         return (
-            <div className="fullscreen bg-info">
+            <div>
                 <Header title={Localization.get('modify_password')} onBack={this.props.history.goBack} />
-                <div className="px-5 pt-5">
-                    <div className="form-group">
+                <div className="container-fluid">
+                    <div className="form-group mt-3">
                         <input
                             type="password"
                             className="form-control"
