@@ -1,4 +1,8 @@
-import { BrowserRouter as Router, Route, IndexRoute, Switch } from 'react-router-dom';
+// BrowserRouter for release
+// import { BrowserRouter as Router, Route, IndexRoute, Switch } from 'react-router-dom';
+
+// HashRouter for debug
+import { HashRouter as Router, Route, IndexRoute, Switch } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop.js';
 import HomeScreen from './screens/home/index.js';
 import LoginScreen from './screens/login/index.js';
