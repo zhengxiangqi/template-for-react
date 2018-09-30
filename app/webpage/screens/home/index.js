@@ -13,6 +13,7 @@ export default class Home extends React.Component {
                 <div className="container-fluid">
                     <div className="row no-gutters mt-5 pt-5">
                         <a target="_blank" href="/docs">文档</a>
+                        <span className="glyphicon glyphicon-heart text-success"></span>
                     </div>
                 </div>
             </div>

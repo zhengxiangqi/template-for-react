@@ -27,7 +27,7 @@
 **工程采用以下框架进行开发**
 * React：用于构建页面功能逻辑
 * ReactRouter：用于组织页面路由
-* Bootstrap4：用于加速UI组件开发，目前采用sass和css双模式开发
+* Bootstrap4：用于加速UI组件开发，目前采用sass和css双模式开发，同时增加了对Glyphicons图标的支持
 * Lodash：用于加速js功能逻辑编写
 * Sass: Css结合Bootstrap开发语言Sass进行样式编写
 * Ddocsify: 使用Markdown格式编写项目文档

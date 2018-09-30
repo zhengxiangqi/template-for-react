@@ -14,9 +14,9 @@ module.exports = {
         index: ['app/static/index.html'],
         sources: [
             'app/static/favicon.ico',
-            'app/static/assets/*',
-            'app/static/images/*',
-            'app/static/fonts/*'
+            'app/static/assets/**/*',
+            'app/static/images/**/*',
+            'app/static/fonts/**/*'
         ],
         libs: ['app/libs/**/*'],
         vendors: [
@@ -35,6 +35,7 @@ module.exports = {
         'tmp/dist/vendors/react-dom/**/*.js',
         'tmp/dist/vendors/bootstrap/**/*.js',
         'tmp/dist/vendors/libs/**/*.js',
+        'tmp/dist/vendors/**/*.css',
         'tmp/dist/app/styles/**/*.css',
         'tmp/dist/app/styles/**/*.js',
         'tmp/dist/app/webpage/**/*.js'
