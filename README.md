@@ -10,7 +10,7 @@
         * images：网页中用到的图片资源
         * favicon.ico：网页图标
         * index.html：网页基础文件，用来引入各个样式文件与脚本文件
-    * styles：样式代码，目前采用sacc和css双模式开发，可提升编译效率及样式代码灵活性
+    * styles：样式代码，目前采用sass和css双模式开发，可提升编译效率及样式代码灵活性
         * bootstrap/index.scss：scss样式文件入口，用于引入sass样式代码
         * bootstrap/bootstrap.scss：用于自定义bootstrap样式
         * custom/index.css：自定义样式文件
