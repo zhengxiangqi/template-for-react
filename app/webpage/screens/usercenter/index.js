@@ -33,7 +33,7 @@ export default class UserCenter extends React.Component {
                         <Link to="/password">
                             <button className="btn list-group-item list-group-item-action">
                                 <label className="float-left pl-2 mb-0">{Localization.get('modify_password')}</label>
-                                <img className="float-right icon-xs-h" src="images/personal_img09.png" alt=""/>
+                                <span class="float-right glyphicon glyphicon-chevron-right mt-1" aria-hidden="true"></span>
                             </button>
                         </Link>
                         <button onClick={this.onLogout} className="btn list-group-item list-group-item-action">
