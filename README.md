@@ -30,7 +30,7 @@
 * Bootstrap4：用于加速UI组件开发，目前采用sass和css双模式开发，同时增加了对Glyphicons图标的支持
 * Lodash：用于加速js功能逻辑编写
 * Sass: Css结合Bootstrap开发语言Sass进行样式编写
-* Ddocsify: 使用Markdown格式编写项目文档
+* Docsify: 使用Markdown格式编写项目文档
 
 
 **工程采用以下框架进行编译发布**
